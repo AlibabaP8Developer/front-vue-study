@@ -33,7 +33,7 @@
       </h1>
       <div class="searchArea">
         <form action="###" class="searchForm">
-          <input type="text" id="autocomplete" class="input-error input-xxlarge" />
+          <input type="text" v-model="keyword" id="autocomplete" class="input-error input-xxlarge" />
           <button class="sui-btn btn-xlarge btn-danger" @click="goSearch()" type="button">搜索</button>
         </form>
       </div>
@@ -46,7 +46,9 @@ export default {
   name: "Header",
 
   data() {
-    return {};
+    return {
+      keyword: ''
+    };
   },
 
   mounted() {},
@@ -54,7 +56,13 @@ export default {
   methods: {
     // 搜索按钮的回调函数
     goSearch() {
-      this.$router.push('/search')
+      // 路由传递参数
+      // 1.字符串形式
+      // this.$router.push('/search/'+ this.keyword + '?keyword=' + this.keyword.toUpperCase() )
+      // 2.模版字符串
+      // this.$router.push(`/search/${this.keyword}/?keyword=${this.keyword.toUpperCase()}`)
+      // 3.对象
+      this.$router.push({name: 'search', params: {keyword: this.keyword}, query: { keyword: this.keyword.toUpperCase() }})
     }
   },
 };

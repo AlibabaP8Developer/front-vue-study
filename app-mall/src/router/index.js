@@ -23,11 +23,13 @@ export default new VueRouter({
             }
         },
         {
-            path: '/search',
+            path: '/search/:keyword',
             component: Search,
             meta: {
                 show:true
-            }
+            },
+            // 对象形式给路由传参时
+            name: 'search'
         },
         {
             path: '/login',
