@@ -54,3 +54,19 @@ $router: 一般进行编程式导航进行路由跳转【push|replace】
     编程式导航push|replace，可以进行路由的跳转
 
 编程式导航：声明式导航能做的，编程式都能做
+
+Footer组件显示与隐藏
+显示或隐藏组件：v-if、v-show
+Footer组件：在Home、Search显示Footer组件
+Footer组件：在登录、注册时是隐藏的
+
+> 路由传参
+
+路由跳转有几种方式？
+比如：A->B
+声明式导航：router-link（务必要有to属性），可以实现路由的跳转
+编程式导航：利用的是组件实例的$router.push|replace方法，可以实现路由的跳转。
+
+路由传参
+    params参数：属于路径当中的一部分，需要注意，在配置路由的时候，需要占位
+    query参数：不属于路径当中的一部分，类似于Ajax中的query  /home?k=v&kv=,不需要占位

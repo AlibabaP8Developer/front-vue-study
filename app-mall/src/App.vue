@@ -2,7 +2,10 @@
   <div>
     <Header></Header>
     <router-view></router-view>
-    <Footer></Footer>
+    <!-- 在登录、注册时是隐藏的 -->
+    <!-- <Footer v-show="$route.path=='/home' || $route.path=='/search'"></Footer> -->
+    <!-- 路由元信息 -->
+    <Footer v-show="$route.meta.show"></Footer>
   </div>
 </template>
 
