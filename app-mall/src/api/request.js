@@ -1,4 +1,8 @@
 import axios from "axios";
+// 引入进度条
+import nprogress from 'nprogress'
+
+console.log(nprogress);
 
 // 1.利用axios对象的方法create，去创建一个axios实例
 // 2.request就是axios，只不过稍微配置一下
