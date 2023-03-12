@@ -14,3 +14,10 @@ cnpm install --save nprogress
 
 > 完成其余静态组件
 HTML+css+图片资源
+
+> mockjs
+1.在src创建mock
+2.准备JSON数据
+
+> vuex
+cnpm install --save vuex
