@@ -9,6 +9,9 @@ main.js: 程序入口文件，也是整个程序中最先执行的文件
 babel.config.js: 配置文件
 
 ## Project setup
+
+git push origin -u main
+
 ```
 npm install
 ```
