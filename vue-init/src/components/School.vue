@@ -7,7 +7,7 @@
 
 <script>
 // 引入混合
-import {mixin, data} from '@/mixin/mixin'
+// import {mixin, data} from '@/mixin/mixin'
 
 export default {
   name: 'School',
@@ -18,12 +18,14 @@ export default {
   //   year: Number,
   //   address: String
   // },
-  mixins: [mixin, data],
+  // mixins: [mixin, data],
   data() {
     return {
       name: '北京师范大学',
       address: '北京市海淀区中关村'
     }
+  },
+  mounted() {
   }
 }
 </script>

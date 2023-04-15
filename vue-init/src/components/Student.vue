@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import {mixin, data} from '@/mixin/mixin'
+// import {mixin, data} from '@/mixin/mixin'
 
 export default {
   name: 'School',
@@ -18,7 +18,7 @@ export default {
   //   year: Number,
   //   address: String
   // },
-  mixins: [mixin, data],
+  // mixins: [mixin, data],
   props: {
     age: {
       type: Number,

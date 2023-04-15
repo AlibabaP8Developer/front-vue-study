@@ -6,7 +6,7 @@ export const mixin = {
         }
     },
     mounted() {
-
+        console.log('你好啊！')
     }
 }
 
