@@ -2,6 +2,7 @@
   <div class="school">
     <h2>学校的名称：{{ name | mySlice }}</h2>
     <h2>学校的地址：{{ address }}</h2>
+    <button @click="test">点我测试hello方法</button>
   </div>
 </template>
 
@@ -23,12 +24,17 @@ export default {
     }
   },
   mounted() {
+  },
+  methods: {
+    test() {
+      this.hello()
+    }
   }
 }
 </script>
 
 <style scoped>
 .school {
-  background-color: gray;
+  background-color: skyblue;
 }
 </style>
