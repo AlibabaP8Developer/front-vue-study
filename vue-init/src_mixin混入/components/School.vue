@@ -1,12 +1,13 @@
 <template>
   <div class="school">
-    <h2>学生的名称：{{ name }}</h2>
-    <h2>学生的年龄：{{ age }}</h2>
-    <h2>学生的地址：{{ sex }}</h2>
+    <h2 @click="showName">学校的名称：{{ name }}</h2>
+    <h2>学校的地址：{{ address }}</h2>
   </div>
 </template>
 
 <script>
+// 引入混合
+// import {mixin, data} from '@/mixin/mixin'
 
 export default {
   name: 'School',
@@ -17,17 +18,14 @@ export default {
   //   year: Number,
   //   address: String
   // },
-  props: {
-    age: {
-      type: Number,
-      default: 99
-    }
-  },
+  // mixins: [mixin, data],
   data() {
     return {
-      name: '赵匡胤',
-      sex: '男'
+      name: '北京师范大学',
+      address: '北京市海淀区中关村'
     }
+  },
+  mounted() {
   }
 }
 </script>

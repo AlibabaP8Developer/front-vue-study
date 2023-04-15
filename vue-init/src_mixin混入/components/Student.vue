@@ -1,12 +1,13 @@
 <template>
   <div class="school">
-    <h2>学生的名称：{{ name }}</h2>
+    <h2 @click="showName">学生的名称：{{ name }}</h2>
     <h2>学生的年龄：{{ age }}</h2>
     <h2>学生的地址：{{ sex }}</h2>
   </div>
 </template>
 
 <script>
+// import {mixin, data} from '@/mixin/mixin'
 
 export default {
   name: 'School',
@@ -17,6 +18,7 @@ export default {
   //   year: Number,
   //   address: String
   // },
+  // mixins: [mixin, data],
   props: {
     age: {
       type: Number,

@@ -1,13 +1,11 @@
 <template>
   <div class="school">
-    <h2 @click="showName">学校的名称：{{ name }}</h2>
+    <h2>学校的名称：{{ name | mySlice }}</h2>
     <h2>学校的地址：{{ address }}</h2>
   </div>
 </template>
 
 <script>
-// 引入混合
-// import {mixin, data} from '@/mixin/mixin'
 
 export default {
   name: 'School',
@@ -18,7 +16,6 @@ export default {
   //   year: Number,
   //   address: String
   // },
-  // mixins: [mixin, data],
   data() {
     return {
       name: '北京师范大学',
