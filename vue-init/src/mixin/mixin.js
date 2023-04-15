@@ -9,3 +9,12 @@ export const mixin = {
 
     }
 }
+
+export const data = {
+    data() {
+        return {
+            x: 100,
+            y: 200
+        }
+    }
+}
