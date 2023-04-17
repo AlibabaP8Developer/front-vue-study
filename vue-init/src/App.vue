@@ -1,32 +1,28 @@
 <template>
   <div id="app">
-    <h1 v-text="msg" ref="title"></h1>
-    <button @click="showDOM">点我输出上方的dom元素</button>
-    <student ref="sc" :age="10"></student>
-    <school></school>
+    <MyHeader></MyHeader>
+    <List></List>
+    <MyFooter></MyFooter>
   </div>
 </template>
 
 <script>
-import Student from "@/components/Student";
-import School from "@/components/School";
+import MyHeader from "@/components/MyHeader";
+import List from "@/components/MyList";
+import MyFooter from "@/components/MyFooter";
+
 
 export default {
   name: 'App',
   components: {
-    Student,
-    School
+    MyFooter,
+    MyHeader,
+    List
   },
   data() {
-    return {
-      msg: '欢迎学习Vue！'
-    }
+    return {}
   },
-  methods: {
-    showDOM() {
-      console.log('---', this.$refs)
-    }
-  }
+  methods: {}
 }
 </script>
 
