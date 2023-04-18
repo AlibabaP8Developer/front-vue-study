@@ -10,11 +10,13 @@
 import {nanoid} from 'nanoid'
 export default {
   name: "MyHeader",
+  props: ['addTodo'],
   methods: {
     add(event) {
       // 将用户的输入包装成一个todo对象
       const todoObj = {id: nanoid(), title: event.target.value, done: false}
       console.log(todoObj)
+      this.addTodo(todoObj)
     }
   }
 }

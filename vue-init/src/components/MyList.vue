@@ -12,19 +12,7 @@ import Item from "@/components/Item";
 export default {
   name: "MyList",
   components: {Item},
-  data() {
-    return {
-      todos: [
-        {id: '1001', title: '朱元璋', done: false},
-        {id: '1002', title: '完颜亮', done: false},
-        {id: '1004', title: '阿敏', done: false},
-        {id: '1005', title: '莽古尔泰', done: true},
-        {id: '1006', title: '喇嘛达尔扎', done: true},
-        {id: '1007', title: '葛尔丹策零', done: true},
-        {id: '1003', title: '朱重八', done: false}
-      ]
-    }
-  }
+  props: ['todos']  // vc
 }
 </script>
 
