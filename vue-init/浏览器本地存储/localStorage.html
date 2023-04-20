@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>浏览器本地存储</title>
+</head>
+<body>
+<h2>
+    localStorage
+</h2>
+<button onclick="saveData()">点我保存一个数据</button>
+<button onclick="readData()">点我读取一个数据</button>
+<button onclick="delData()">点我删除一个数据</button>
+<script type="text/javascript">
+    let p = {name: '纥石烈志宁', age: 10}
+    function saveData() {
+        localStorage.setItem("msg", "hello")
+        localStorage.setItem("message", JSON.stringify(p))
+    }
+    function readData() {
+        var msg = localStorage.getItem("msg");
+        var message = localStorage.getItem("message");
+        console.log('msg---', msg)
+        console.log('message---', JSON.parse(message))
+    }
+    function delData() {
+        localStorage.removeItem('msg')
+    }
+</script>
+</body>
+</html>
