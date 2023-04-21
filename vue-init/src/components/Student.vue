@@ -1,0 +1,32 @@
+<template>
+  <div class="student">
+    <h2>学生的名称：{{ name }}</h2>
+    <h2>学生的年龄：{{ age }}</h2>
+    <h2>学生的地址：{{ sex }}</h2>
+  </div>
+</template>
+
+<script>
+
+export default {
+  name: 'Student',
+  props: {
+    age: {
+      type: Number,
+      default: 99
+    }
+  },
+  data() {
+    return {
+      name: '赵匡胤',
+      sex: '男'
+    }
+  }
+}
+</script>
+
+<style scoped lang="less">
+.student {
+  background-color: orange;
+}
+</style>
