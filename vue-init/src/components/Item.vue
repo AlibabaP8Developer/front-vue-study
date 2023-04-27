@@ -2,10 +2,10 @@
   <div>
     <li>
       <label>
-        <input type="checkbox" :checked="todo.done" @change="handleCheck(todo.id)" />
+        <input type="checkbox" :checked="todo.done" @change="handleCheck(todo.id)"/>
         <span>{{ todo.title }}</span>
       </label>
-      <button class="btn btn-danger">删除</button>
+      <button class="btn btn-danger" @click="handleDelete(todo.id)">删除</button>
     </li>
   </div>
 </template>
@@ -14,15 +14,24 @@
 export default {
   name: "Item",
   // 声明接收todo对象
-  props: ['todo', 'checkTodo'],
+  props: ['todo', 'checkTodo', 'deleteTodo'],
   mounted() {
     console.log('qwe', this.todo)
   },
   methods: {
+    // 勾选
     handleCheck(id) {
       console.log('id: ', id)
       // 通知App组件将对应的todo对象的done值取反
       this.checkTodo(id)
+    },
+    // 删除
+    handleDelete(id) {
+      if (confirm('确定删除吗？')) {
+        console.log('id:', id)
+        // 通知App
+        this.deleteTodo(id)
+      }
     }
   }
 }
