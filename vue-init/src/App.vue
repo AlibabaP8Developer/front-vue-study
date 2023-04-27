@@ -4,7 +4,7 @@
       <div class="todo-wrap">
         <MyHeader :addTodo="addTodo"></MyHeader>
         <MyList :todos="todos" :checkTodo="checkTodo" :deleteTodo="deleteTodo"></MyList>
-        <MyFooter :todos="todos"></MyFooter>
+        <MyFooter :todos="todos" :checkAllTodo="checkAllTodo"></MyFooter>
       </div>
     </div>
   </div>
@@ -51,6 +51,12 @@ export default {
     deleteTodo(id) {
       this.todos = this.todos.filter(todo => {
         return todo.id !== id
+      })
+    },
+    // 全选或取消全选
+    checkAllTodo(done) {
+      this.todos.forEach((todo)=>{
+        todo.done = done
       })
     }
   }
