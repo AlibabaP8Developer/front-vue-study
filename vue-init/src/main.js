@@ -11,4 +11,9 @@ Vue.use(plugins, '大清', 2)
 new Vue({
   el: '#app',
   render: h => h(App),
+  mounted() {
+    setTimeout(()=>{
+      this.$destroy()
+    }, 3000)
+  }
 })
