@@ -4,16 +4,7 @@ import App from './App.vue'
 // 关闭Vue的生产提示
 Vue.config.productionTip = false
 
-// 引入插件
-import plugins from "@/plugins";
-Vue.use(plugins, '大清', 2)
-
 new Vue({
   el: '#app',
-  render: h => h(App),
-  mounted() {
-    setTimeout(()=>{
-      this.$destroy()
-    }, 3000)
-  }
+  render: h => h(App)
 })
