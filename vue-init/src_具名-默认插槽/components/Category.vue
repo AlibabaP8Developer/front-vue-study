@@ -1,19 +1,16 @@
 <template>
   <div class="category">
     <h3>{{title}}分类</h3>
-    <slot :games="games"></slot>
+    <!-- 定义一个插槽，使用者进行填充 -->
+    <slot name="center">定义一个插槽</slot>
+    <slot name="footer">定义一个插槽</slot>
   </div>
 </template>
 
 <script>
 export default {
   name: "Category",
-  props: ['title'],
-  data() {
-    return {
-      games: ['坦克大战', '超级玛丽', '王者荣耀', '英雄联盟'],
-    }
-  }
+  props: ['listData', 'title']
 }
 </script>
 
