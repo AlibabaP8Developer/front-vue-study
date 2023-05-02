@@ -27,7 +27,7 @@
 </template>
 
 <script>
-import Category from "@/components/Category";
+import Category from "@/components/Count";
 
 export default {
   name: 'App',
