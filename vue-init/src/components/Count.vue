@@ -3,7 +3,13 @@
     <h1>当前求和为：{{ sum }}</h1>
     <h1>当前求和放大10倍为：{{ bigSum }}</h1>
     <h1>完颜麻达葛在{{ school }}，学习{{ subject }}</h1>
-    <select v-model="n">
+    <h2 style="color: red">下方组件的总人数是：{{personList.length}}</h2>
+    <ul>
+      <li v-for="item in personList">
+        {{item.name}}
+      </li>
+    </ul>
+    <select v-model.number="n">
       <option :value="1">1</option>
       <option :value="2">2</option>
       <option :value="3">3</option>
@@ -45,9 +51,11 @@ export default {
     // }),
 
     // 数组写法
-    ...mapState(['sum',
+    ...mapState([
+      'sum',
       'school',
-      'subject'
+      'subject',
+      'personList'
     ]),
 
     // bigSum() {
