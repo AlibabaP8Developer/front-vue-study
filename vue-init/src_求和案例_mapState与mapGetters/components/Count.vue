@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import {mapState, mapGetters, mapMutations} from 'vuex'
+import {mapState, mapGetters} from 'vuex'
 
 export default {
   name: "Category",
@@ -73,21 +73,16 @@ export default {
     console.log('x: ', x)
   },
   methods: {
-    // increment() {
-    //   this.$store.commit('JIA', this.n)
-    // },
-    // decrement() {
-    //   this.$store.commit('JIAN', this.n)
-    // },
-
-    ...mapMutations({
-      increment: 'JIA',
-      decrement: 'JIAN'
-    }),
-
-    //==============================
+    increment() {
+      this.$store.commit('JIA', this.n)
+    },
+    decrement() {
+      this.$store.commit('JIAN', this.n)
+    },
     incrementOdd() {
-      this.$store.dispatch('jiaOdd', this.n)
+      if (this.$store.state.sum % 2) {
+        this.$store.dispatch('jiaOdd', this.n)
+      }
     },
     incrementWait() {
       this.$store.dispatch('jiaWait', this.n)
