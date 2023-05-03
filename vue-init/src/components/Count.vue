@@ -8,8 +8,8 @@
       <option :value="2">2</option>
       <option :value="3">3</option>
     </select>
-    <button @click="increment">+</button>
-    <button @click="decrement">-</button>
+    <button @click="increment(n)">+</button>
+    <button @click="decrement(n)">-</button>
     <button @click="incrementOdd">当前求和为奇数再加</button>
     <button @click="incrementWait">等一等再加</button>
   </div>
@@ -80,10 +80,18 @@ export default {
     //   this.$store.commit('JIAN', this.n)
     // },
 
+    // 借助mapMutations生成对应的方法，方法中会调用commit去联系mutations（对象写法）
     ...mapMutations({
       increment: 'JIA',
       decrement: 'JIAN'
     }),
+
+    // 数组写法
+    // 'JIA'、'JIAN'生成的名字也是这个，上面调用的时候也要求是这个名
+    // ...mapMutations([
+    //   'JIA',
+    //   'JIAN'
+    // ]),
 
     //==============================
     incrementOdd() {

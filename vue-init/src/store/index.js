@@ -48,13 +48,23 @@ const mutations = {
         console.log('actions中的JIAWAIT被调用了', state, value)
         state.sum += value
     },
+    ADD_PERSON(state, value) {
+        console.log('ADD_PERSON被调用了：', state,value)
+        state.personList.unshift(value)
+    }
 }
 
 // 准备state，用于存储数据
 const state = {
     sum: 0, //  当前的和
     school: '尚硅谷',
-    subject: '前端'
+    subject: '前端',
+    personList: [
+        {id: '001', name: '完颜阿骨打'},
+        {id: '002', name: '完颜雍'},
+        {id: '003', name: '完颜亮'},
+        {id: '004', name: '完颜璟'}
+    ]
 }
 
 // 准备getter，用于将state中的数据进行加工
