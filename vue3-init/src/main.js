@@ -7,4 +7,6 @@ import App from './App.vue'
 const app = createApp(App)
 
 console.log('app:', app)
+// 挂载
 app.mount('#app')
+// app.unmount('#app')
