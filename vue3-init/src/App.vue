@@ -1,35 +1,26 @@
 <template>
   <h1>App组件</h1>
-  <h1>{{ name }}</h1>
-  <h1>{{ age }}</h1>
-  <h1>{{ sex }}</h1>
-  <h1>{{ job.type }}</h1>
-  <h1>{{ job.salary }}</h1>
+  <h1>{{ person.name }}</h1>
+  <h1>{{ person.age }}</h1>
+  <h1>{{ person.sex }}</h1>
+  <h1>{{ person.job.type }}</h1>
+  <h1>{{ person.job.salary }}</h1>
   <h1>{{ school.type }}</h1>
   <h1>{{ school.salary }}</h1>
+  <h1>爱好：{{ person.hobbyHuaiMan }}</h1>
   <h1>测试的数据：{{ school.a.b.c.d }}</h1>
-  <button @click="sayHello">sayHello</button>
-  <button @click="changeInfo">修改人的信息</button>
   <button @click="changeInfoSchool">修改人的信息reactive</button>
 </template>
 
 <script>
-// import {h} from 'vue'
-// 引入ref
-import { ref, reactive } from 'vue'
+// 引入reactive
+import { reactive } from 'vue'
 
 export default {
   name: 'App',
 
   // 此处只是测试setup
   setup () {
-    let name = ref('朱元璋')
-    let age = ref(11)
-    let job = ref({
-      type: '"大有皇帝"曾应龙',
-      salary: '30k'
-    })
-
     let school = reactive({
       type: '大清皇帝圣祖爷康熙皇帝',
       salary: '666k',
@@ -42,38 +33,38 @@ export default {
       }
     })
 
-    function sayHello () {
-      alert(`你是${name}, 年龄${age}`)
-    }
+    let hobbyHuaiMan = ['吃', '喝', '嫖', '赌', '抽烟', '喝酒', '烫头', '纹身', '玩大型网络游戏', '看主播刷礼物', '搞破鞋']
 
-    function changeInfo () {
-      name.value = '完颜'
-      age.value = 19
-      job.value.type = '大唐'
-      console.log(name, age)
-      console.log(job.value)
-    }
+    let hobbyGoodMan = ['学习', '考试', '上图书馆', '读好书', '不抽烟', '不喝酒', '不破鞋', '不耍钱', '内卷严重']
+
+    let person = reactive({
+      name: '朱元璋',
+      age: 11,
+      job: {
+        type: '洪武皇帝',
+        salary: '666k',
+      },
+      hobbyHuaiMan,
+      hobbyGoodMan
+    })
 
     function changeInfoSchool () {
-      name.value = '爱新觉罗'
-      age.value = 19
-      job.value.type = '大清'
+      person.name = '爱新觉罗'
+      person.age = 19
+      person.job.type = '大清'
       school.type = '国立师范大学'
       school.salary = '9999k'
       school.a.b.c.d = 99999
-      console.log(name, age)
 
-      console.log(job)
+      person.hobbyHuaiMan[1] = '卷起来'
+      person.hobbyHuaiMan[2] = person.hobbyGoodMan[3]
+      person.hobbyHuaiMan[3] = person.hobbyGoodMan[4]
     }
 
     // 返回一个函数（重点）
     return {
-      name,
-      age,
-      job,
       school,
-      sayHello,
-      changeInfo,
+      person,
       changeInfoSchool
     }
 
