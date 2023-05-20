@@ -2,7 +2,7 @@
   <h1>App组件</h1>
   <h1>{{ person.name }}</h1>
   <h1>{{ person.age }}</h1>
-  <h1 v-show="person.sex">{{ person.sex }}</h1>
+  <h1>{{ person.sex }}</h1>
   <h1>{{ person.job.type }}</h1>
   <h1>{{ person.job.salary }}</h1>
   <h1>{{ school.type }}</h1>
@@ -10,8 +10,6 @@
   <h1>爱好：{{ person.hobbyHuaiMan }}</h1>
   <h1>测试的数据：{{ school.a.b.c.d }}</h1>
   <button @click="changeInfoSchool">修改人的信息reactive</button>
-  <button @click="addSex">添加一个sex属性</button>
-  <button @click="deleteName">删除一个name属性</button>
 </template>
 
 <script>
@@ -63,20 +61,10 @@ export default {
       person.hobbyHuaiMan[3] = person.hobbyGoodMan[4]
     }
 
-    function addSex() {
-      person.sex= '女'
-    }
-
-    function deleteName() {
-      delete person.name
-    }
-
     // 返回一个函数（重点）
     return {
       school,
       person,
-      addSex,
-      deleteName,
       changeInfoSchool
     }
 
