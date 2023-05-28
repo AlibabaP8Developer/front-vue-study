@@ -6,9 +6,9 @@
     <h2>当前的信息为：{{ msg }}</h2>
     <button @click="msg+='!'">修改信息</button>
     <hr>
-    <h2>姓名：{{person.name}}</h2>
-    <h2>年龄：{{person.age}}</h2>
-    <h2>工钱：{{person.job.j1.salary}}</h2>
+    <h2>姓名：{{ person.name }}</h2>
+    <h2>年龄：{{ person.age }}</h2>
+    <h2>工钱：{{ person.job.j1.salary }}</h2>
     <button @click="person.name+='，耶律阿保机的后人'">修改姓名</button>
     <button @click="person.age++">增长年龄</button>
     <button @click="person.job.j1.salary++">增长工钱</button>
@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import { watch, ref, reactive } from 'vue'
+import { watch, ref, watchEffect, reactive } from 'vue'
 
 export default {
   name: 'Demo',
@@ -33,24 +33,21 @@ export default {
       }
     })
 
-    // 情况一：监视ref所定义的一个响应式数据
     watch(sum, (newValue, oldValue) => {
-      console.log('sum变了：', newValue, oldValue)
+      console.log('sum的值变了：',newValue, oldValue)
     }, {
       immediate: true
     })
 
-    // 情况二：监视ref所定义的多个响应式数据
-    watch([sum, msg], (newValue, oldValue) => {
-      console.log('msg变了：', newValue, oldValue)
-    }, {
-      immediate: true
-    })
+    // watch(person.value, (newValue, oldValue) => {
+    //   console.log('person的值变了：',newValue, oldValue)
+    // })
 
-    // 情况三：监视reactive所定义的一个响应式数据
-    // 注意：此处无法正确的获取oldValue
-    watch(person, (newValue, oldValue)=>{
-      console.log('person变化了', newValue, oldValue)
+    // 监视 watchEffect用谁监视谁
+    watchEffect( () => {
+      const x = sum.value
+      const y = person.job.j1.salary
+      console.log('watchEffect所指定的回调执行了')
     })
 
     // 返回一个对象（常用）
