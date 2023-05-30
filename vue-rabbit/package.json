@@ -8,12 +8,20 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "element-plus": "^2.3.5",
+    "font-awesome": "^4.7.0",
     "pinia": "^2.0.36",
-    "vue": "^3.3.2",
+    "vue-drag-verify": "https://registry.npmjs.org/vue-drag-verify/-/vue-drag-verify-1.0.6.tgz",
     "vue-router": "^4.2.0"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.2.3",
-    "vite": "^4.3.5"
+    "sass": "^1.62.1",
+    "unplugin-auto-import": "^0.16.2",
+    "unplugin-element-plus": "^0.7.1",
+    "unplugin-vue-components": "^0.24.1",
+    "vite": "^3.0.2",
+    "vue": "^3.3.4",
+    "vue-loader": "^17.1.1"
   }
 }

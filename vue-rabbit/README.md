@@ -2,6 +2,10 @@
 
 ![](./vue3create-project.png)
 
+自定义样式
+
+npm i sass -D
+
 ```sh
 npm install
 ```
