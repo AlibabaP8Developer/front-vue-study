@@ -1,11 +1,5 @@
 <script setup>
 
-import {getCategory} from '@/apis/testAPI'
-
-getCategory().then(res => {
-  console.log('res:::', res)
-})
-
 </script>
 
 <template>
