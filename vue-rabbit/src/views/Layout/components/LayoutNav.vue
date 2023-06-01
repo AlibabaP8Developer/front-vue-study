@@ -1,9 +1,13 @@
+<script setup>
+
+</script>
+
 <template>
   <nav class="app-topnav">
     <div class="container">
       <ul>
         <template v-if="true">
-          <li><a href="javascript:;''"><i class="iconfont icon-user"></i>周杰伦</a></li>
+          <li><a href="javascript:;"><i class="iconfont icon-user"></i>周杰伦</a></li>
           <li>
             <el-popconfirm title="确认退出吗?" confirm-button-text="确认" cancel-button-text="取消">
               <template #reference>
@@ -24,22 +28,15 @@
   </nav>
 </template>
 
-<script>
-export default {
-  name: "LayoutNav"
-}
-</script>
 
 <style scoped lang="scss">
 .app-topnav {
   background: #333;
-
   ul {
     display: flex;
     height: 53px;
     justify-content: flex-end;
     align-items: center;
-
     li {
       a {
         padding: 0 15px;
@@ -57,7 +54,7 @@ export default {
         }
       }
 
-      ~ li {
+      ~li {
         a {
           border-left: 2px solid #666;
         }

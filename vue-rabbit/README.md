@@ -2,6 +2,10 @@
 
 ![](./vue3create-project.png)
 
+获取滚动距离【VueUse】
+
+npm i @vueuse/core
+
 自定义样式
 
 npm i sass -D

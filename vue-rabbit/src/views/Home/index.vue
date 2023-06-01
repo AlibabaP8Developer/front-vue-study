@@ -1,6 +1,6 @@
 <template>
-  <div>
-    homey
+  这个是首页
+  <div style="height: 100%">
   </div>
 </template>
 
