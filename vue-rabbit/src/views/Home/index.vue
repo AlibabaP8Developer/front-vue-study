@@ -6,16 +6,7 @@
   <HomeNew />
   <HomeHot />
   <HomeProduct />
-  <home-panel title="新鲜好物" sub-title="新鲜好物 好多商品">
-    <div>
-      人气推荐
-    </div>
-  </home-panel>
-  <home-panel title="人气推荐" sub-title="人气推荐 好多商品">
-    <div>
-      人气推荐
-    </div>
-  </home-panel>
+
 </template>
 
 <script setup>
