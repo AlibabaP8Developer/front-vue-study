@@ -45,7 +45,7 @@
 import {getBannerAPI} from '@/apis/home'
 import {getTopCategoryAPI} from '@/apis/category'
 import {onMounted, ref} from "vue";
-import {useRoute} from 'vue-router'
+import {useRoute, onBeforeRouteUpdate} from 'vue-router'
 import GoodsItem from '@/views/home/components/GoodsItem.vue'
 
 // 获取数据
@@ -53,15 +53,21 @@ const categoryData = ref({})
 
 // 获取路由参数
 const route = useRoute()
-const id = route.params.id
 
-const getCategory = async () => {
+const getCategory = async (id = route.params.id) => {
   const res = await getTopCategoryAPI(id)
   categoryData.value = res.result
 }
 
 onMounted(() => {
   getCategory()
+})
+
+// 目标：路由参数变化的时候，可以把分类数据接口重新发送，解决路由缓存问题
+onBeforeRouteUpdate((to) => {
+  console.log('路由变化了', to)
+  // 存在问题：使用最新的路由参数请求最新的分类数据
+  getCategory(to.params.id)
 })
 
 // 获取banner
