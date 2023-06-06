@@ -44,7 +44,7 @@
                 </li>
                 <li>
                   <p>品牌信息</p>
-                  <p>{{ goods.brand.name }}</p>
+                 <p>{{ goods.brand.name }}</p>
                   <p><i class="iconfont icon-dynamic-filling"></i>品牌主页</p>
                 </li>
               </ul>
@@ -95,19 +95,22 @@
                 <div class="goods-detail">
                   <!-- 属性 -->
                   <ul class="attrs">
-                    <li v-for="item in goods.details.properties" :key="item.value">
-                      <span class="dt">{{ item.name }}</span>
-                      <span class="dd">{{ item.value }}</span>
-                    </li>
+                   <li v-for="item in goods.details.properties" :key="item.value">
+                     <span class="dt">{{ item.name }}</span>
+                     <span class="dd">{{ item.value }}</span>
+                   </li>
                   </ul>
                   <!-- 图片 -->
-                  <img  v-for="img in goods.details.pictures" :src="img" :key="img" alt="">
+                 <img  v-for="img in goods.details.pictures" :src="img" :key="img" alt="">
                 </div>
               </div>
             </div>
             <!-- 24热榜+专题推荐 -->
             <div class="goods-aside">
-
+              <!-- 24h -->
+              <DetailHot></DetailHot>
+              <!-- 周 -->
+              <DetailHot></DetailHot>
             </div>
           </div>
         </div>
@@ -117,9 +120,10 @@
 </template>
 
 <script setup>
+import DetailHot from './components/DetailHot.vue';
 import {getDetail} from '@/apis/detail'
-import {onMounted, ref} from "vue";
-import {useRoute} from "vue-router";
+import { onMounted, ref } from 'vue'
+import {useRoute} from "vue-router"
 
 const goods = ref({})
 const route = useRoute()
@@ -127,12 +131,10 @@ const route = useRoute()
 const getGoods = async () => {
   const res = await getDetail(route.params.id)
   goods.value = res.result
+  console.log('goods:', goods.value)
 }
 
-onMounted(() => {
-  getGoods()
-})
-
+onMounted(() => getGoods())
 </script>
 
 <style scoped lang="scss">
