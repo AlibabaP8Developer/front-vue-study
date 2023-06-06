@@ -2,7 +2,7 @@
   <div class="goods-image">
     <!-- 左侧大图-->
     <div class="middle" ref="target">
-      <img :src="imageList[activeIndex]" alt="" />
+      <img :src="imageList[activeIndex]"  alt="" />
       <!-- 蒙层小滑块 -->
       <div class="layer" :style="{ left: `0px`, top: `0px` }"></div>
     </div>
