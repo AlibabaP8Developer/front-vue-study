@@ -24,7 +24,7 @@
           <div class="goods-info">
             <div class="media">
               <!-- 图片预览区 -->
-
+              <ImageView></ImageView>
               <!-- 统计数量 -->
               <ul class="goods-sales">
                 <li>
@@ -44,7 +44,7 @@
                 </li>
                 <li>
                   <p>品牌信息</p>
-                 <p>{{ goods.brand.name }}</p>
+                 <!-- <p>{{ goods.brand.name }}</p> -->
                   <p><i class="iconfont icon-dynamic-filling"></i>品牌主页</p>
                 </li>
               </ul>
@@ -95,13 +95,13 @@
                 <div class="goods-detail">
                   <!-- 属性 -->
                   <ul class="attrs">
-                   <li v-for="item in goods.details.properties" :key="item.value">
+                   <!-- <li v-for="item in goods.details.properties" :key="item.value">
                      <span class="dt">{{ item.name }}</span>
                      <span class="dd">{{ item.value }}</span>
-                   </li>
+                   </li> -->
                   </ul>
                   <!-- 图片 -->
-                 <img  v-for="img in goods.details.pictures" :src="img" :key="img" alt="">
+                 <!-- <img  v-for="img in goods.details.pictures" :src="img" :key="img" alt=""> -->
                 </div>
               </div>
             </div>
@@ -121,6 +121,7 @@
 
 <script setup>
 import DetailHot from './components/DetailHot.vue';
+import ImageView from '@/components/ImageView/index.vue'
 import {getDetail} from '@/apis/detail'
 import { onMounted, ref } from 'vue'
 import {useRoute} from "vue-router"
