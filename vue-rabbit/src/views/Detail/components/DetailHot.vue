@@ -1,12 +1,12 @@
 <template>
   <div class="goods-hot">
-    <h3>周日榜单</h3>
+    <h3>{{ title }}</h3>
     <!-- 商品区块 -->
     <RouterLink to="/" class="goods-item" v-for="item in hotList" :key="item.id">
       <img :src="item.picture" alt="" />
-      <p class="name ellipsis">{{item.name}}</p>
-      <p class="desc ellipsis">{{item.desc}}</p>
-      <p class="price">&yen; {{item.price}}</p>
+      <p class="name ellipsis">{{ item.name }}</p>
+      <p class="desc ellipsis">{{ item.desc }}</p>
+      <p class="price">&yen; {{ item.price }}</p>
     </RouterLink>
   </div>
 </template>
@@ -15,8 +15,23 @@
 // 24h热榜获取数据
 // 封装接口
 import { getHotGoodsAPI } from "@/apis/detail";
-import { onMounted, ref } from "vue";
+import { computed, onMounted, ref } from "vue";
 import { useRoute } from "vue-router";
+
+const props = defineProps({
+  hotType: {
+    type: Number,
+  },
+});
+
+// 适配title 1 - 24h  2-周热榜
+const TYPEMAP = {
+  1: "24小时热榜",
+  2: "周热榜",
+};
+
+const title = computed(() => TYPEMAP[props.hotType]);
+
 // 调用接口
 const hotList = ref({});
 const route = useRoute();
