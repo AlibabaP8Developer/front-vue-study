@@ -1,7 +1,3 @@
-<script setup>
-
-</script>
-
 <template>
   <nav class="app-topnav">
     <div class="container">
@@ -28,6 +24,10 @@
     </div>
   </nav>
 </template>
+
+<script setup>
+
+</script>
 
 <style scoped lang="scss">
 .app-topnav {
