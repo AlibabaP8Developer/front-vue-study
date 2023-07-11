@@ -19,7 +19,7 @@
         </nav>
         <div class="account-box">
           <div class="form">
-            <el-form :model="form" :rules="rules" label-position="right" label-width="60px"
+            <el-form ref="formRef" :model="form" :rules="rules" label-position="right" label-width="60px"
                      status-icon>
               <el-form-item label="账户" prop="account">
                 <el-input v-model="form.account"/>
@@ -32,7 +32,7 @@
                   我已同意隐私条款和服务条款
                 </el-checkbox>
               </el-form-item>
-              <el-button size="large" class="subBtn">点击登录</el-button>
+              <el-button size="large" class="subBtn" @click="doLogin">点击登录</el-button>
             </el-form>
           </div>
         </div>
@@ -105,7 +105,21 @@ const rules = {
     }
   ]
 }
-
+// 3.获取 form 实例做统一校验
+const formRef = ref(null)
+const doLogin = () => {
+  // 调用实例方法
+  formRef.value.validate((valid) => {
+    console.log('valid', valid)
+    // 以valid做为判断条件，如果通过校验才执行登录逻辑
+    if (valid) {
+      // TODO 登录
+    }
+  })
+}
+// 1.用户名和密码 只需要通过简单的配置
+// 2.自定义规则 同意协议
+// 3.统一校验
 </script>
 
 <style scoped lang="scss">
