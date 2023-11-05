@@ -4,6 +4,8 @@
 
 获取滚动距离【VueUse】
 
+注意：node版本为16.xx！！！
+
 npm i @vueuse/core
 
 自定义样式
