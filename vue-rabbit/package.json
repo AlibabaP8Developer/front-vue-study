@@ -13,6 +13,7 @@
     "element-plus": "^2.3.5",
     "font-awesome": "^4.7.0",
     "pinia": "^2.0.36",
+    "pinia-plugin-persistedstate": "^3.2.0",
     "vue-drag-verify": "https://registry.npmjs.org/vue-drag-verify/-/vue-drag-verify-1.0.6.tgz",
     "vue-router": "^4.2.0"
   },

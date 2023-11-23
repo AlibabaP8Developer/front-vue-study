@@ -16,4 +16,7 @@ export const useUserStore = defineStore('user', () => {
         userInfo,
         getUserInfo
     }
+}, {
+    //  pinia
+    persist: true
 })
