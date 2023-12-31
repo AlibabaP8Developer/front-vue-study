@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>banner效果</title>
+    <style>
+        .banner {
+            height: 500px;
+            background-color: #f3f3f4;
+            background-image: url(./images/login-bg.png);
+            /*不平铺*/
+            background-repeat: no-repeat;
+            /*左下角*/
+            background-position: left bottom;
+            text-align: right;
+            color: #333;
+            padding-right: 15px;
+        }
+        .banner h2 {
+            font-size: 36px;
+            /*不加粗*/
+            font-weight: 400;
+            line-height: 100px;
+        }
+        .banner p {
+            font-size: 20px;
+        }
+        .banner a {
+            /*去掉下划线*/
+            text-decoration: none;
+            width: 123px;
+            height: 40px;
+            background-color: #f06b1f;
+            color: #ffffff;
+            /*行内块*/
+            display: inline-block;
+            text-align: center;
+            /*垂直居中，和高度一致*/
+            line-height: 40px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="banner">
+    <h2>遥遥领先</h2>
+    <p>我们希望小游戏平台可以提供无限可能性</p>
+    <a href="#">立即报名</a>
+</div>
+</body>
+</html>
