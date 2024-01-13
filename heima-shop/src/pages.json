@@ -14,6 +14,8 @@
     {
       "path": "pages/index/index",
       "style": {
+        // 隐藏默认导航栏儿
+        "navigationStyle": "custom",
         "navigationBarTitleText": "首页"
       }
     },
@@ -54,7 +56,8 @@
     "selectedColor": "#27ba9b",
     "backgroundColor": "#fff",
     "borderStyle": "white",
-    "list": [{
+    "list": [
+      {
         "text": "首页",
         "pagePath": "pages/index/index",
         "iconPath": "static/tabs/home_default.png",
