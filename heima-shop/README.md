@@ -96,3 +96,8 @@ npm run dev:h5
 ├── tsconfig.json              # typescript 配置
 └── vite.config.ts             # vite 配置
 ```
+
+# 安装pinia
+```javascript
+npm i pinia-plugin-persistedstate
+```
