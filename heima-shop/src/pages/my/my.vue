@@ -6,12 +6,12 @@ const memberStore = useMemberStore();
 
 // 测试请求
 const getData = async () => {
-  const res = await http({
+  const res = await http<number[]>({
     method: "GET",
-    url: "/home/banner",
+    url: "/member/profile11",
     header: {},
   });
-  console.log("请求成功：", res);
+  console.log("请求成功：", res.code);
 };
 </script>
 
