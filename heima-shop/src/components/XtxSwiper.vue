@@ -1,13 +1,20 @@
-<script setup lang='ts'>
-import { ref } from 'vue'
+<script setup lang="ts">
+import { ref } from "vue";
 
-const activeIndex = ref(0)
+const activeIndex = ref(0);
+
+// swiper下标发生变化时触发
+const onChange: UniHelper.SwiperOnChange = (ev) => {
+  console.log("ev:", ev.detail.current)
+  // !：非空断言，主观上排除掉空值/undefined情况
+  activeIndex.value = ev.detail!.current
+}
 </script>
 
 <template>
   <!--轮播图-->
   <view class="carousel">
-    <swiper :circular="true" :autoplay="false" :interval="3000">
+    <swiper :circular="true" :autoplay="false" :interval="3000" @change="onChange">
       <swiper-item>
         <navigator url="/pages/index/index" hover-class="none" class="navigator">
           <image
@@ -48,7 +55,7 @@ const activeIndex = ref(0)
   </view>
 </template>
 
-<style scoped lang='scss'>
+<style scoped lang="scss">
 /* 轮播图 */
 .carousel {
   height: 280rpx;
