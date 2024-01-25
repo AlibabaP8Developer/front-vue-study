@@ -8,6 +8,7 @@
         * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
 
         li {
@@ -26,21 +27,41 @@
         }
 
         .box ul {
-            /*上 右 下 左*/
-            padding: 90px 40px 90px 60px;
-            height: 418px;
-
             display: flex;
             /*弹性盒子换行*/
             flex-wrap: wrap;
             /*主轴对齐方式*/
             justify-content: space-between;
+            /*行对齐方式*/
+            align-content: space-between;
+
+            /*上 右 下 左*/
+            padding: 90px 40px 90px 60px;
+            height: 418px;
         }
 
         .box li {
             width: 500px;
             height: 88px;
             background-color: pink;
+
+            display: flex;
+        }
+
+        .box .pic {
+            margin-right: 15px;
+        }
+        .box .text h4 {
+            /*行高*/
+            line-height: 40px;
+            font-size: 20px;
+            font-weight: 400;
+            color: #333333;
+        }
+
+        .box .text p {
+            font-size: 14px;
+            color: #666;
         }
     </style>
 </head>
@@ -48,16 +69,40 @@
 <div class="box">
     <ul>
         <li>
-            <img src="./images/1.svg" alt="">
+            <div class="pic">
+                <img src="./images/1.svg" alt="">
+            </div>
+            <div class="text">
+                <h4>一键发布多端</h4>
+                <p>发布视频到YouTube短视频，西瓜视频及优酷</p>
+            </div>
         </li>
         <li>
-            <img src="./images/2.svg" alt="">
+            <div class="pic">
+                <img src="./images/2.svg" alt="">
+            </div>
+            <div class="text">
+                <h4>一键发布多端</h4>
+                <p>发布视频到YouTube短视频，西瓜视频及优酷</p>
+            </div>
         </li>
         <li>
-            <img src="./images/3.svg" alt="">
+            <div class="pic">
+                <img src="./images/3.svg" alt="">
+            </div>
+            <div class="text">
+                <h4>一键发布多端</h4>
+                <p>发布视频到YouTube短视频，西瓜视频及优酷</p>
+            </div>
         </li>
         <li>
-            <img src="./images/4.svg" alt="">
+            <div class="pic">
+                <img src="./images/4.svg" alt="">
+            </div>
+            <div class="text">
+                <h4>一键发布多端</h4>
+                <p>发布视频到YouTube短视频，西瓜视频及优酷</p>
+            </div>
         </li>
     </ul>
 </div>
