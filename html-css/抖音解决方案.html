@@ -3,18 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <title>抖音解决方案</title>
-  <style>
-    /*清除样式*/
-    * {
-      margin: 0;
-      padding: 0
-    }
-    li {
-      list-style: none;
-    }
-  </style>
+    <style>
+        /*清除样式*/
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            /*去掉列表样式*/
+            list-style: none;
+        }
+
+        .box {
+            /*上边距 居中*/
+            margin: 50px auto;
+            width: 1200px;
+            height: 418px;
+            border: 1px solid #ddd;
+            /*圆角*/
+            border-radius: 20px;
+        }
+
+        .box ul {
+            /*上 右 下 左*/
+            padding: 90px 40px 90px 60px;
+            height: 418px;
+
+            display: flex;
+            /*弹性盒子换行*/
+            flex-wrap: wrap;
+            /*主轴对齐方式*/
+            justify-content: space-between;
+        }
+
+        .box li {
+            width: 500px;
+            height: 88px;
+            background-color: pink;
+        }
+    </style>
 </head>
 <body>
-
+<div class="box">
+    <ul>
+        <li>
+            <img src="./images/1.svg" alt="">
+        </li>
+        <li>
+            <img src="./images/2.svg" alt="">
+        </li>
+        <li>
+            <img src="./images/3.svg" alt="">
+        </li>
+        <li>
+            <img src="./images/4.svg" alt="">
+        </li>
+    </ul>
+</div>
 </body>
 </html>
