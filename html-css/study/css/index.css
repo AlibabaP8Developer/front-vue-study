@@ -114,3 +114,185 @@ body {
     font-size: 16px;
     color: #666;
 }
+
+/*banner区域*/
+.banner {
+    background-color: #0092cb;
+    height: 420px;
+}
+
+.banner .wrapper {
+    display: flex;
+    /*主轴对齐方式*/
+    justify-content: space-between;
+    height: 420px;
+    background-image: url(../uploads/banner.png);
+}
+
+.banner .left {
+    width: 191px;
+    height: 420px;
+    /*背景色半透明*/
+    background-color: rgba(0, 0, 0, 0.4);
+
+    /*上下 左右外边距*/
+    padding: 3px 20px;
+}
+
+.banner .left a {
+    /*块级：宽度是父级的100%*/
+    display: block;
+    height: 46px;
+    line-height: 46px;
+    color: #ffffff;
+    font-size: 16px;
+    /*背景图片 不平铺 右侧 居中*/
+    background: url(../images/right.png) no-repeat right center;
+}
+
+/*鼠标悬停样式*/
+.banner .left a:hover {
+    color: #00a4ff;
+    background-image: url(../images/right-hover.png);
+}
+
+.banner .right {
+    width: 218px;
+    height: 305px;
+    background-color: #209dd5;
+    /*圆角*/
+    border-radius: 10px;
+    margin-top: 60px;
+}
+
+.banner .right h3 {
+    margin-left: 14px;
+    height: 48px;
+    line-height: 48px;
+    font-size: 15px;
+    color: #ffffff;
+    font-weight: 400;
+}
+
+.banner .right .content {
+    /*圆角*/
+    border-radius: 10px;
+    height: 257px;
+    background-color: #ffffff;
+    padding: 14px;
+}
+
+.banner .right .content dl {
+    margin-bottom: 12px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.banner .right .content dt {
+    margin-bottom: 8px;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.banner .right .content dd {
+    margin-bottom: 8px;
+    font-size: 12px;
+    line-height: 16px;
+}
+.banner .right .content dd span {
+    color: #00a4ff;
+}
+.banner .right .content dd strong {
+    color: #7d7d7d;
+    /*不加粗*/
+    font-weight: 400;
+}
+
+.banner .right .content a {
+    display: block;
+    height: 32px;
+    background-color: #00a4ff;
+    border-radius: 15px;
+    text-align: center;
+    line-height: 32px;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+/*精品推荐*/
+.recommend {
+    display: flex;
+    background-color: #ffffff;
+    height: 60px;
+    /*背景色不透明*/
+    box-shadow: 0px 1px 2px 0px rgba(211,211,211,0.5);
+    margin-top: 11px;
+    padding: 0 20px;
+    line-height: 60px;
+}
+
+.recommend h3 {
+    font-size: 18px;
+    color: #00a4ff;
+    font-weight: 400;
+}
+.recommend ul {
+    /*弹性伸缩比，除去修改标题和修改兴趣的尺寸，父级剩余尺寸都是ul*/
+    flex: 1;
+    display: flex;
+}
+
+.recommend ul li a {
+    padding: 0 24px;
+    border-right: 1px solid #e0e0e0;
+    font-size: 18px;
+}
+
+.recommend ul li:last-child a {
+    border-right: none;
+}
+.recommend .modify {
+    font-size: 16px;
+    color: #00a4ff;
+}
+/*精品推荐课程*/
+.course {
+    margin-top: 15px;
+}
+
+/*标题 - 公共类，与其他区域是共用*/
+.hd {
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    line-height: 60px;
+}
+
+.hd h3 {
+    font-weight: 400;
+    font-size: 21px;
+}
+
+.hd .more {
+    font-size: 14px;
+    color: #999999;
+    background: url(../images/more.png) no-repeat right center;
+    padding-right: 20px;
+}
+/*课程内容 - 公共类*/
+.bd ul {
+    display: flex;
+    /*弹性换行*/
+    flex-wrap: wrap;
+    /*主轴对齐方式*/
+    justify-content: space-between;
+}
+
+.bd li {
+    width: 228px;
+    height: 271px;
+    background-color: pink;
+    margin-bottom: 14px;
+}
+
+
+
