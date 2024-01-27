@@ -1,0 +1,116 @@
+/*首页css样式*/
+/*首页版心*/
+.wrapper {
+    width: 1200px;
+    /*居中*/
+    margin: 0 auto;
+}
+
+body {
+    /*全页面颜色*/
+    background-color: #f3f5f7;
+}
+
+.header {
+    height: 100px;
+    background-color: #ffffff;
+}
+
+.header .wrapper {
+    display: flex;
+    padding-top: 29px;
+}
+
+.logo {
+    display: block;
+    width: 195px;
+    height: 41px;
+    background-image: url(../images/logo.png);
+    font-size: 0;
+}
+
+/*导航*/
+.nav {
+    margin-left: 102px;
+}
+
+.nav ul {
+    display: flex;
+}
+
+.nav li {
+    margin-right: 24px;
+}
+
+.nav li a {
+    display: block;
+    padding: 6px 8px;
+    line-height: 27px;
+    font-size: 19px;
+}
+
+/*active类选择器， 表示默认选中的a*/
+.nav li .active,
+.nav li a:hover {
+    /*下划线*/
+    border-bottom: 2px solid #00a4ff;
+}
+
+/*搜索区域*/
+.search {
+    display: flex;
+    width: 412px;
+    height: 40px;
+    background-color: #f3f5f7;
+    /*圆角搜索区域框*/
+    border-radius: 20px;
+    /*外边距*/
+    margin-left: 64px;
+    /*内边距*/
+    padding-left: 19px;
+    padding-right: 12px;
+}
+
+.search input {
+    /*圆角搜索区域框*/
+    border-radius: 20px;
+    flex: 1;
+    border: 0;
+    /*透明背景色*/
+    background-color: transparent;
+    /*去掉表单控件焦点框*/
+    outline: none;
+}
+
+/*placeholder 选中的是placeholder属性文字样式*/
+.search input::placeholder {
+    font-size: 14px;
+    color: #999;
+}
+
+/*父级是flex布局，子级变成弹性盒子：加宽高生效*/
+.search a {
+    width: 16px;
+    height: 16px;
+    background-image: url(../images/search.png);
+    /*align-self：弹性盒子本身，侧轴居中*/
+    align-self: center;
+}
+
+/*用户中心*/
+.user {
+    margin-left: 32px;
+    margin-top: 4px;
+}
+
+/*图片文字垂直居中*/
+.user img {
+    /*vertical-align: 行内块和行内垂直方向对齐方式 */
+    vertical-align: middle;
+    margin-right: 7px;
+}
+
+.user span {
+    font-size: 16px;
+    color: #666;
+}
