@@ -198,9 +198,11 @@ body {
     font-size: 12px;
     line-height: 16px;
 }
+
 .banner .right .content dd span {
     color: #00a4ff;
 }
+
 .banner .right .content dd strong {
     color: #7d7d7d;
     /*不加粗*/
@@ -224,7 +226,7 @@ body {
     background-color: #ffffff;
     height: 60px;
     /*背景色不透明*/
-    box-shadow: 0px 1px 2px 0px rgba(211,211,211,0.5);
+    box-shadow: 0px 1px 2px 0px rgba(211, 211, 211, 0.5);
     margin-top: 11px;
     padding: 0 20px;
     line-height: 60px;
@@ -235,6 +237,7 @@ body {
     color: #00a4ff;
     font-weight: 400;
 }
+
 .recommend ul {
     /*弹性伸缩比，除去修改标题和修改兴趣的尺寸，父级剩余尺寸都是ul*/
     flex: 1;
@@ -250,10 +253,12 @@ body {
 .recommend ul li:last-child a {
     border-right: none;
 }
+
 .recommend .modify {
     font-size: 16px;
     color: #00a4ff;
 }
+
 /*精品推荐课程*/
 .course {
     margin-top: 15px;
@@ -278,6 +283,7 @@ body {
     background: url(../images/more.png) no-repeat right center;
     padding-right: 20px;
 }
+
 /*课程内容 - 公共类*/
 .bd ul {
     display: flex;
@@ -294,5 +300,128 @@ body {
     margin-bottom: 14px;
 }
 
+.bd li .pic {
+    height: 156px;
+}
 
+.bd li .text {
+    padding: 20px;
+    height: 115px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.bd li .text h4 {
+    margin-bottom: 13px;
+    height: 40px;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+}
+
+.bd li .text p {
+    font-size: 14px;
+    line-height: 20px;
+    color: #999;
+}
+
+.bd li .text p span {
+    color: #fa6400;
+}
+
+.bd li .text p i {
+    /*字体不倾斜 正常*/
+    font-style: normal;
+}
+
+/*前端*/
+.hd ul {
+    display: flex;
+}
+
+.hd li {
+    margin-right: 60px;
+    font-size: 16px;
+}
+
+.hd li .active {
+    color: #00a4ff;
+}
+
+.bd {
+    display: flex;
+    /*主轴对齐方式*/
+    justify-content: space-between;
+}
+
+.bd .left {
+    width: 228px;
+    background-color: #ffffff;
+}
+
+.bd .right {
+    width: 957px;
+    background-color: #ffffff;
+}
+
+.bd .right .top {
+    margin-bottom: 15px;
+    height: 100px;
+}
+
+/*版权*/
+.footer {
+    margin-top: 60px;
+    height: 273px;
+    background-color: #ffffff;
+    padding-top: 60px;
+}
+
+.footer .wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer .left {
+    width: 440px;
+    background-color: #ffffff;
+}
+
+.footer .left p {
+    margin-top: 24px;
+    margin-bottom: 14px;
+    font-size: 12px;
+    line-height: 17px;
+    color: #666;
+}
+
+.footer .left .download {
+    display: block;
+    width: 120px;
+    height: 36px;
+    border: 1px solid #00a4ff;
+    font-size: 16px;
+    text-align: center;
+    line-height: 34px;
+    color: #00a4ff;
+}
+.footer .right {
+    display: flex;
+}
+
+.footer .right dl {
+    margin-left: 130px;
+}
+
+.footer .right dt {
+    margin-bottom: 12px;
+    font-size: 16px;
+    line-height: 23px;
+}
+
+.footer .right a {
+    font-size: 14px;
+    color: #666666;
+    line-height: 24px;
+}
 
