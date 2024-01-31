@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>轮播图</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .banner {
+            /*background-color: pink;*/
+            width: 564px;
+            height: 315px;
+            margin: 100px auto;
+            overflow: hidden;
+        }
+
+        .banner img {
+            width: 564px;
+            /*height: 315px;*/
+            border-radius: 12px;
+            /*基线*/
+            vertical-align: middle;
+        }
+
+        .banner ul {
+            display: flex;
+        }
+
+        /*箭头*/
+        .banner .prev,
+        .banner .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+
+            width: 20px;
+            height: 30px;
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+
+        .banner .prev {
+            left: 0;
+        }
+
+        .banner .next {
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+<div class="banner">
+    <!--图-->
+    <ul>
+        <li><a href="#"><img src="./images/banner1.jpg" alt=""/></a></li>
+        <li><a href="#"><img src="./images/banner2.jpg" alt=""/></a></li>
+        <li><a href="#"><img src="./images/banner3.jpg" alt=""/></a></li>
+    </ul>
+    <!--箭头-->
+    <!--上一张-->
+    <a href="#" class="prev">左</a>
+    <!--下一张-->
+    <a href="#" class="next">右</a>
+    <!--圆点-->
+</div>
+</body>
+</html>
