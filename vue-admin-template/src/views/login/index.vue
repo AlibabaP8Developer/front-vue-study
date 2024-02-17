@@ -82,6 +82,7 @@ export default {
       // 点击登录完成表单校验
       this.$refs.form.validate((isOk)=>{
         if (isOk) {
+          this.$store.dispatch('user/login', this.loginForm)
           this.$message.success('校验通过')
         }
       })
