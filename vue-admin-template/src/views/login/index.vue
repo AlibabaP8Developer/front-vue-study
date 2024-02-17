@@ -13,8 +13,8 @@
           <el-form-item prop="password">
             <el-input v-model="loginForm.password" type="password" placeholder="请输入密码"/>
           </el-form-item>
-          <el-form-item>
-            <el-checkbox>
+          <el-form-item prop='isAgree'>
+            <el-checkbox v-model="loginForm.isAgree">
               用户平台使用协议
             </el-checkbox>
           </el-form-item>
@@ -62,7 +62,18 @@ export default {
             message: '密码长度为6-16位之间',
           }
         ],
-        isAgree: []
+        // required只能检测 null undefined ''
+        isAgree: [
+          {
+            validator: (rule, value, callback) => {
+              // rule校验规则
+              // value 校验的值
+              // callback 函数 - promise resolve reject
+              // callback() callback(new Error(错误信息))
+              value? callback() : callback(new Error('你必须勾选用户使用协议'))
+            }
+          }
+        ]
       }
     }
   }
