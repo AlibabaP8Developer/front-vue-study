@@ -6,12 +6,12 @@
       <el-card shadow="never" class="login-card">
         <!--登录表单-->
         <!-- el-form > el-form-item > el-input -->
-        <el-form>
-          <el-form-item>
-            <el-input placeholder="请输入手机号"/>
+        <el-form ref='form' :model='loginForm' :rules='loginRoles'>
+          <el-form-item prop="mobile">
+            <el-input v-model="loginForm.mobile" placeholder="请输入手机号"/>
           </el-form-item>
-          <el-form-item>
-            <el-input placeholder="请输入密码"/>
+          <el-form-item prop="password">
+            <el-input v-model="loginForm.password" type="password" placeholder="请输入密码"/>
           </el-form-item>
           <el-form-item>
             <el-checkbox>
@@ -29,7 +29,43 @@
 
 <script>
 export default {
-  name : "Login"
+  name : "Login",
+  data() {
+    return {
+      loginForm: {
+        mobile: '',
+        password: '',
+        isAgree: false
+      },
+      // 校验规则
+      loginRoles: {
+        mobile: [
+          {
+            required: true,
+            message: '手机号不能为空',
+            trigger: 'blur'
+          },
+          {
+            pattern: /^1[3-9]\d{9}$/,
+            message: '手机号格式错误'
+          }
+        ],
+        password: [
+          {
+            required: true,
+            message: '密码不能为空',
+            trigger: 'blur'
+          },
+          {
+            min: 6,
+            max: 16,
+            message: '密码长度为6-16位之间',
+          }
+        ],
+        isAgree: []
+      }
+    }
+  }
 }
 </script>
 
