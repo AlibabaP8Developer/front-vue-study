@@ -19,7 +19,7 @@
             </el-checkbox>
           </el-form-item>
           <el-form-item>
-            <el-button style="width:350px" type="primary">登录</el-button>
+            <el-button style="width:350px" type="primary" @click="login">登录</el-button>
           </el-form-item>
         </el-form>
       </el-card>
@@ -75,6 +75,16 @@ export default {
           }
         ]
       }
+    }
+  },
+  methods: {
+    login() {
+      // 点击登录完成表单校验
+      this.$refs.form.validate((isOk)=>{
+        if (isOk) {
+          this.$message.success('校验通过')
+        }
+      })
     }
   }
 }
