@@ -21,6 +21,7 @@
           <el-form-item>
             <el-button style="width:350px" type="primary" @click="login">登录</el-button>
           </el-form-item>
+          <el-button @click="ajaxTest()">测试接口</el-button>
         </el-form>
       </el-card>
     </div>
@@ -28,6 +29,7 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
   name : "Login",
   data() {
@@ -84,6 +86,16 @@ export default {
         if (isOk) {
           this.$store.dispatch('user/login', this.loginForm)
           this.$message.success('校验通过')
+        }
+      })
+    },
+    ajaxTest() {
+      axios({
+        url: 'https://heimahr.itheima.net/api/sys/login',
+        method: 'post',
+        data: {
+          mobile: '13912345678',
+          password: '123456'
         }
       })
     }
