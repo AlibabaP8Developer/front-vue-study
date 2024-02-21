@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>轮播图</title>
+    <link rel="stylesheet" href="./iconfont/iconfont.css">
     <style>
         * {
             margin: 0;
@@ -38,6 +39,9 @@
         /*箭头*/
         .banner .prev,
         .banner .next {
+            /* 隐藏左右箭头 */
+            display: none;
+
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
@@ -45,14 +49,30 @@
             width: 20px;
             height: 30px;
             background-color: rgba(0, 0, 0, 0.3);
+
+            /* 去掉超链接下划线 */
+            text-decoration: none;
+            color: #fff;
+            /* 垂直居中 */
+            line-height: 30px;
+        }
+
+        /* 鼠标滑到banner区域，箭头要显示 display：block */
+        .banner:hover .prev, 
+        .banner:hover .next {
+            display: block;
         }
 
         .banner .prev {
             left: 0;
+            border-radius: 0 15px 15px 0; 
         }
 
         .banner .next {
             right: 0;
+            border-radius: 15px 0 0 15px;
+            /* 水平居中 */
+            text-align: center;
         }
     </style>
 </head>
@@ -66,9 +86,13 @@
     </ul>
     <!--箭头-->
     <!--上一张-->
-    <a href="#" class="prev">左</a>
+    <a href="#" class="prev">
+        <i class="iconfont icon-zuoce"></i>
+    </a>
     <!--下一张-->
-    <a href="#" class="next">右</a>
+    <a href="#" class="next">
+        <i class="iconfont icon-youce"></i>
+    </a>
     <!--圆点-->
 </div>
 </body>
