@@ -74,6 +74,34 @@
             /* 水平居中 */
             text-align: center;
         }
+
+        /* 圆点 */
+        .banner ol {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            border-radius: 10px;
+
+            height: 13px;
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .banner ol li {
+            width: 8px;
+            height: 8px;
+            background-color: #fff;
+            border-radius: 50%;
+            margin: 2px;
+            /* 圆点指针小手 */
+            cursor: pointer;
+        }
+
+        /* 橙色 li */
+        .banner ol .active {
+            background-color: #ff5000;
+        }
     </style>
 </head>
 <body>
@@ -94,6 +122,11 @@
         <i class="iconfont icon-youce"></i>
     </a>
     <!--圆点-->
+    <ol>
+        <li></li>
+        <li></li>
+        <li class="active"></li>
+    </ol>
 </div>
 </body>
 </html>
