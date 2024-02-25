@@ -1,1 +1,11 @@
 /* 首页内容的样式 */
+/* banner */
+.banner {
+    height: 500px;
+    background-color: #F5F5F5;
+}
+
+.banner .wrapper {
+    height: 500px;
+    background-color: pink;
+}
