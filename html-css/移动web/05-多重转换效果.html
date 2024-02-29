@@ -20,6 +20,10 @@
         .box:hover img {
             /* 先平移再旋转 */
             transform: translate(700px) rotate(360deg);
+
+            /* 旋转会改变坐标轴向 */
+            /* 多重转换：以第一种转换形态的坐标轴为准 */
+            /* transform: rotate(360deg) translate(700px); */
         }
     </style>
 </head>
