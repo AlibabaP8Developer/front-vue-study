@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>旋转效果</title>
+    <style>
+        img {
+            width: 200px;
+            border: 1px solid  #000;
+
+            transition: all 2s;
+            /* 右下点旋转 */
+            transform-origin: right bottom;
+        }
+
+        img:hover {
+            /* 
+                旋转角度 360度数转一圈 单位：deg 
+                正数 顺时针， 负数 逆时针
+            */
+            transform: rotate(-360deg);
+        }
+    </style>
+</head>
+<body>
+    <img src="./images/rotate.png" alt="">
+</body>
+</html>
