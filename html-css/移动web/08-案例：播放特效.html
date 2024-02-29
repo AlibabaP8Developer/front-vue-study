@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>案例：播放特效</title>
+    <style>
+        li {
+            list-style: none;
+        }
+        
+        img {
+            width: 100%;
+        }
+
+        .box {
+            width: 249px;
+            height: 210px;
+            margin: 50px auto;
+        }
+
+        .box p {
+            color: #3b3b3b;
+            padding: 10px 10px 0 10px;
+        }
+
+        /* 隐藏li外面的样式 */
+        .box li {
+            overflow: hidden;
+        }
+
+        .pic {
+            position: relative;
+        }
+
+        /* 1.摆放播放按钮 */
+        .pic::after {
+            /* 子级绝对，父级相对 */
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            /* margin-left: -29px;
+            margin-top: -29px; */
+            /* transform: translate(-50%, -50%); */
+
+            content: '';
+            width: 58px;
+            height: 58px;
+            background-image: url(./images/play.png);
+
+            /* 放大，先移动再缩放 */
+            transform: translate(-50%, -50%) scale(5);
+            /* 透明度0 */
+            opacity: 0;
+            /* 过渡 */
+            transition: all .5s;
+        }
+        /* 2.hover效果：大按钮 看不见， 透明度：0 -> 小按钮，看得见：透明度：1 */
+        .box li:hover .pic::after {
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="box">
+        <ul>
+            <li>
+                <div class="pic">
+                    <img src="./images/party.jpeg" alt="">
+                </div>
+                <p>
+                    封神英雄
+                </p>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

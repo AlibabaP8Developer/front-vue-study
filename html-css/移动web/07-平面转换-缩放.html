@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>平面转换-缩放</title>
+    <style>
+        .box {
+            width: 300px;
+            height: 210px;
+            margin: 190px auto;
+            background-color: pink;
+        }
+
+        .box img {
+            width: 100%;
+            transition: all 0.5s;
+        }
+
+        .box:hover img {
+            /* transform: scale(缩放倍数) */
+            /* transform: scale(0.5); 缩小 */
+            transform: scale(1.3);
+            /* transform: scale(1); 不变 */
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="./images/product.jpeg" alt="">
+    </div>
+</body>
+</html>
