@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>案例：产品展示</title>
+    <style>
+        .box {
+            position: relative;
+            width: 300px;
+            height: 212px;
+        }
+
+        .box img {
+            width: 300px;
+        }
+
+        .box .title {
+            position: absolute;
+            left: 15px;
+            bottom: 20px;
+
+            z-index: 2;
+            width: 260px;
+            color: #fff;
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .mask {
+            position: absolute;
+            /* 定位父级 */
+            left: 0px;
+            top: 0px;
+
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(
+                /* 透明渐变 */
+                transparent,
+                /* 黑色半透明 */
+                rgba(0,0,0,0.5)
+            ); 
+            /* 透明度是0 不透明 */
+            opacity: 0;
+            /* 过渡 */
+            transition: all 0.5s;
+        }
+
+        .box:hover .mask {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="./images/product.jpeg" alt="">
+        <div class="title">
+            OceanStar Pacific 海量存储2021 Interop金奖
+        </div>
+        <!-- 渐变盒子 -->
+        <div class="mask">
+        </div>
+    </div>
+</body>
+</html>

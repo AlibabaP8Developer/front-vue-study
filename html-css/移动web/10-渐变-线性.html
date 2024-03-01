@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>渐变线性</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: green;
+            background-image: linear-gradient(
+                /* 默认上到下渐变 */
+                red, pink, green
+            );
+
+            background-image: linear-gradient(
+                /* 从左到右渐变 */
+                to right,
+                red, pink, green
+            );
+
+            background-image: linear-gradient(
+                /* 倾斜渐变 */
+                45deg,
+                red, pink, green
+            );
+
+            background-image: linear-gradient(
+                /* 从80%开始渐变 */
+                red 80%, green
+            );
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>
