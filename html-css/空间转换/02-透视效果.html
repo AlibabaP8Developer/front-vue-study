@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>透视效果</title>
+    <style>
+        .father {
+            /* 800-1000 */
+            perspective: 1000px;
+        }
+
+        .son {
+            width: 200px;
+            height: 200px;
+            margin: 100px auto;
+            background-color: pink;
+            transition: all 0.5s;
+        }
+
+        .son:hover {
+            /* 正数：向上，负数：向下 */
+            transform: translateZ(300px);
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="son"></div>
+    </div>
+</body>
+</html>
