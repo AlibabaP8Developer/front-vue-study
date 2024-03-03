@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+}
+
+/* 大背景 */
+body {
+    height: 100vh;
+    background: url(../images/f1_1.jpg) no-repeat center 0 / cover;
+    /* background-size: cover; */
+}
+
+/* 云 */
+.cloud img {
+    position: absolute;
+    left: 50%;
+}
+
+.cloud img:nth-child(1) {
+    margin-left: -250px;
+    top: 20px;
+    /* 
+        linear：匀速 
+        steps：分布动画，在工作中，配合精灵图实现精灵动画
+        重复播放 3：重复3次，infinite：无限循环
+        forwards 动画停止时在结束位置，backwards 停止时在开始位置（默认）
+    */
+    animation: icloud 1s infinite alternate linear;
+}
+
+.cloud img:nth-child(2) {
+    margin-left: 400px;
+    top: 100px;
+    animation: icloud 1s infinite alternate linear 0.4s;
+}
+
+.cloud img:nth-child(3) {
+    margin-left: -550px;
+    margin-top: 200px;
+    animation: icloud 1s infinite alternate linear 0.6s;
+}
+
+.text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    /* 空间平移 */
+    transform: translate(-50%, -50%);
+    animation: text 1s;
+}
+
+@keyframes icloud {
+    100% {
+        transform: translate(20px);
+    }
+}
+
+/* 默认 - 小 - 大- 小 - 默认 */
+@keyframes text {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    20% {
+        transform: translate(-50%, -50%) scale(0.1);
+
+    }
+
+    40% {
+        transform: translate(-50%, -50%) scale(1.4);
+
+    }
+
+    70% {
+        transform: translate(-50%, -50%) scale(0.7);
+
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
