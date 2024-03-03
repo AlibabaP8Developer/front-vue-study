@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation综合属性</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 100px;
+            background-color: pink;
+            /* linear：匀速 */
+            animation: change 5s linear;
+            /* steps：分布动画 */
+            animation: change 1s steps(3);
+        }
+
+        /* 定义动画 */
+        /* 宽度 从200变化到800 */
+        @keyframes change {
+            from {
+                width: 200px;
+            }
+
+            to {
+                width: 800px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
