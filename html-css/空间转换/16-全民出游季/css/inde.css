@@ -62,6 +62,9 @@ body {
 /* 默认 - 小 - 大- 小 - 默认 */
 @keyframes text {
     0% {
+        /* 
+            transform: scale(0.5); 缩小
+        */
         transform: translate(-50%, -50%) scale(1);
     }
 
