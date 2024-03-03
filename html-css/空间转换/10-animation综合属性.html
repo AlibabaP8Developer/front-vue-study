@@ -13,6 +13,16 @@
             animation: change 5s linear;
             /* steps：分布动画，在工作中，配合精灵图实现精灵动画 */
             animation: change 1s steps(3);
+            /* 如果有两个时间，第一个时间动画时长，第二个时间延迟时间 */
+            animation: change 1s 2s;
+            /* 重复播放 3：重复3次，infinite：无限循环 */
+            animation: change 1s 3;
+            animation: change 1s infinite;
+            animation: change 1s infinite alternate;
+            animation: change 1s infinite alternate-reverse;
+            /* forwards 动画停止时在结束位置，backwards 停止时在开始位置（默认） */
+            animation: change 1s forwards;
+            animation: change 1s backwards
         }
 
         /* 定义动画 */
